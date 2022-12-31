@@ -1,0 +1,56 @@
+cabal-version:      2.4
+name:               comp-prog
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+license:            GPL-3.0-or-later
+author:             Michael Lan
+maintainer:         michaellan202@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable usaco
+  main-is:            Main.hs
+
+  -- Modules included in this executable, other than Main.
+  -- cabal-fmt: expand src -Main
+  -- cabal-fmt: expand ver -Main
+  other-modules:
+    BarnTree
+    BarnTree2
+    BarnTreeVerifier
+    Util
+    ZigZagConversion
+
+  -- LANGUAGE extensions used by modules in this package.
+  -- other-extensions:
+  default-extensions:
+    BlockArguments
+    ImportQualifiedPost
+    ViewPatterns
+    LexicalNegation
+
+  build-depends:
+    , array          ^>=0.5.4
+    , base           ^>=4.17.0.0
+    , containers     ^>=0.6.6
+    , extra          ^>=1.7.12
+    , mtl            ^>=2.2.2
+    , pretty-simple  ^>=4.1.2
+    , vector         ^>=0.13.0
+    , text
+
+  hs-source-dirs:     src ver
+  default-language:   Haskell2010
