@@ -34,7 +34,9 @@ solve = do
   let m = M.fromDistinctAscList . zip [1 .. n] $ map (,[]) amts
       g = foldl' (flip $ \(a, b) -> M.adjust (second (b :)) a . M.adjust (second (a :)) b) m e
       t = buildTree avg g 1 1
-  mapM_ print3 $ orders t
+      o = orders t
+  print $ length o
+  mapM_ print3 o
 
 print3 (a, b, c) = putStrLn $ show a ++ " " ++ show b ++ " " ++ show c
 
